@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/bgWhite"
+	android:orientation="vertical"
+	tools:context=".Activities.ShopDetailsActivity">
+	
+	<android.support.v7.widget.Toolbar
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="60dp"
+		android:background="@color/colorPrimary"
+		android:elevation="5dp"
+		app:contentInsetEnd="0dp"
+		app:contentInsetStart="0dp">
+		
+		<android.support.constraint.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:paddingStart="5dp"
+			android:paddingEnd="5dp">
+			
+			<TextView
+				android:id="@+id/tv_shop_title_header"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/shop_title_txt"
+				android:textColor="@color/white"
+				android:textSize="18dp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+		</android.support.constraint.ConstraintLayout>
+	</android.support.v7.widget.Toolbar>
+	
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:padding="10dp">
+		
+		<android.support.constraint.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:orientation="vertical">
+			
+			<android.support.v7.widget.CardView
+				android:id="@+id/cv_shop_logo"
+				android:layout_width="match_parent"
+				android:layout_height="200dp"
+				android:layout_marginTop="20dp"
+				android:elevation="10dp"
+				app:cardCornerRadius="8dp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent">
+				
+				<ImageView
+					android:id="@+id/iv_shop_logo"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:scaleType="fitXY"
+					android:src="@mipmap/ic_launcher" />
+			</android.support.v7.widget.CardView>
+			
+			<TextView
+				android:id="@+id/tv_shop_title"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="20dp"
+				android:layout_weight="1"
+				android:text="@string/shop_title_txt"
+				android:textColor="@color/colorPrimary"
+				android:textSize="18dp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/cv_shop_logo" />
+			
+			<ImageView
+				android:id="@+id/iv_phone_icon_1"
+				android:layout_width="20dp"
+				android:layout_height="20dp"
+				android:layout_marginTop="10dp"
+				android:src="@mipmap/phone_icon"
+				android:visibility="gone"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/tv_shop_title" />
+			
+			<TextView
+				android:id="@+id/tv_phone_1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="10dp"
+				android:onClick="onCallNumber"
+				android:text="(+20) 109 246 94444"
+				android:textColor="@color/gray"
+				android:textSize="14dp"
+				android:visibility="gone"
+				app:layout_constraintBottom_toBottomOf="@+id/iv_phone_icon_1"
+				app:layout_constraintStart_toEndOf="@+id/iv_phone_icon_1"
+				app:layout_constraintTop_toTopOf="@+id/iv_phone_icon_1" />
+			
+			<ImageView
+				android:id="@+id/iv_phone_icon_2"
+				android:layout_width="20dp"
+				android:layout_height="20dp"
+				android:layout_marginTop="10dp"
+				android:src="@mipmap/phone_icon"
+				android:visibility="gone"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/iv_phone_icon_1" />
+			
+			<TextView
+				android:id="@+id/tv_phone_2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="10dp"
+				android:onClick="onCallNumber"
+				android:text="(+20) 109 246 94444"
+				android:textColor="@color/gray"
+				android:textSize="14dp"
+				android:visibility="gone"
+				app:layout_constraintBottom_toBottomOf="@+id/iv_phone_icon_2"
+				app:layout_constraintStart_toEndOf="@+id/iv_phone_icon_2"
+				app:layout_constraintTop_toTopOf="@+id/iv_phone_icon_2" />
+			
+			<ImageView
+				android:id="@+id/iv_phone_icon_3"
+				android:layout_width="20dp"
+				android:layout_height="20dp"
+				android:layout_marginTop="10dp"
+				android:src="@mipmap/phone_icon"
+				android:visibility="gone"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/iv_phone_icon_2" />
+			
+			<TextView
+				android:id="@+id/tv_phone_3"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="10dp"
+				android:onClick="onCallNumber"
+				android:text="(+20) 109 246 94444"
+				android:textColor="@color/gray"
+				android:textSize="14dp"
+				android:visibility="gone"
+				app:layout_constraintBottom_toBottomOf="@+id/iv_phone_icon_3"
+				app:layout_constraintStart_toEndOf="@+id/iv_phone_icon_3"
+				app:layout_constraintTop_toTopOf="@+id/iv_phone_icon_3" />
+			
+			<ImageView
+				android:id="@+id/iv_address_icon"
+				android:layout_width="20dp"
+				android:layout_height="20dp"
+				android:layout_marginTop="10dp"
+				android:src="@mipmap/address_icon"
+				android:visibility="gone"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/iv_phone_icon_3" />
+			
+			<TextView
+				android:id="@+id/tv_address"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="10dp"
+				android:text="address txt"
+				android:textColor="@color/gray"
+				android:textSize="14dp"
+				android:visibility="gone"
+				app:layout_constraintBottom_toBottomOf="@+id/iv_address_icon"
+				app:layout_constraintStart_toEndOf="@+id/iv_address_icon"
+				app:layout_constraintTop_toTopOf="@+id/iv_address_icon" />
+		
+		</android.support.constraint.ConstraintLayout>
+	</ScrollView>
+	
+	<Button
+		android:id="@+id/btn_open_maps"
+		android:layout_width="250dp"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginBottom="20dp"
+		android:background="@drawable/blue_button_bg"
+		android:onClick="openOnMaps"
+		android:text="Open On Maps"
+		android:textAllCaps="false"
+		android:textColor="@color/white" />
+
+
+</LinearLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginTop="5dp"
+	android:layout_marginBottom="5dp"
+	app:cardCornerRadius="8dp"
+	app:cardBackgroundColor="@color/white">
+	
+	<android.support.constraint.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingStart="5dp"
+		android:paddingTop="10dp"
+		android:paddingEnd="5dp"
+		android:paddingBottom="10dp">
+		
+		<android.support.v7.widget.CardView
+			android:layout_width="100dp"
+			android:layout_height="100dp"
+			android:elevation="10dp"
+			app:cardCornerRadius="8dp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@+id/gl_shop_info_start"
+			app:layout_constraintTop_toTopOf="parent">
+			
+			<ImageView
+				android:id="@+id/iv_shop_logo"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@color/white"
+				android:scaleType="fitXY"
+				android:src="@mipmap/ic_launcher" />
+		</android.support.v7.widget.CardView>
+		
+		
+		<android.support.constraint.Guideline
+			android:id="@+id/gl_shop_info_start"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintGuide_percent="0.7"
+			app:layout_constraintTop_toTopOf="parent" />
+		
+		<TextView
+			android:id="@+id/tv_shop_title"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginEnd="10dp"
+			android:text="Schulist-McCullough"
+			android:textSize="14dp"
+			app:layout_constraintEnd_toStartOf="@+id/gl_shop_info_start"
+			app:layout_constraintTop_toTopOf="parent" />
+		
+		<RatingBar
+			android:id="@+id/rb_shop_rate"
+			style="?attr/ratingBarStyleSmall"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="5dp"
+			android:layout_marginEnd="10dp"
+			android:isIndicator="true"
+			android:numStars="5"
+			android:rating="0"
+			android:stepSize="1"
+			app:layout_constraintBottom_toBottomOf="@+id/tv_rating_txt"
+			app:layout_constraintEnd_toStartOf="@+id/gl_shop_info_start"
+			app:layout_constraintTop_toBottomOf="@+id/tv_shop_title" />
+		
+		<TextView
+			android:id="@+id/tv_rating_txt"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginEnd="10dp"
+			android:text="التقييم العام من ٥ مستخدمين"
+			android:textSize="12dp"
+			app:layout_constraintEnd_toStartOf="@+id/rb_shop_rate"
+			app:layout_constraintTop_toTopOf="@+id/rb_shop_rate" />
+		
+		<LinearLayout
+			android:id="@+id/ll_shop_phone"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="5dp"
+			android:layout_marginEnd="10dp"
+			android:gravity="center"
+			android:orientation="horizontal"
+			app:layout_constraintEnd_toStartOf="@+id/gl_shop_info_start"
+			app:layout_constraintTop_toBottomOf="@+id/rb_shop_rate">
+			
+			<TextView
+				android:id="@+id/tv_shop_phone"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="end"
+				android:layout_marginEnd="5dp"
+				android:gravity="end"
+				android:text="(+20) 109 246 9444"
+				android:textSize="12dp" />
+			
+			<ImageView
+				android:layout_width="20dp"
+				android:layout_height="20dp"
+				android:src="@mipmap/phone_icon" />
+		</LinearLayout>
+		
+		<LinearLayout
+			android:id="@+id/ll_shop_address"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="5dp"
+			android:layout_marginEnd="10dp"
+			android:gravity="center"
+			android:orientation="horizontal"
+			app:layout_constraintEnd_toStartOf="@+id/gl_shop_info_start"
+			app:layout_constraintTop_toBottomOf="@+id/ll_shop_phone">
+			
+			<TextView
+				android:id="@+id/tv_shop_addess"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="end"
+				android:layout_marginEnd="5dp"
+				android:gravity="end"
+				android:text="Leannon Pass Apt. 334 8266"
+				android:textSize="12dp" />
+			
+			<ImageView
+				android:layout_width="20dp"
+				android:layout_height="20dp"
+				android:src="@mipmap/address_icon" />
+		</LinearLayout>
+	</android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
+

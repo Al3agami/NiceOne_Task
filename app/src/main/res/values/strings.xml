@@ -1,0 +1,9 @@
+<resources>
+	<string name="app_name">NiceOne Task</string>
+	<string name="search_by_category">البحث بالتخصص</string>
+	<string name="categories">التخصصات</string>
+	<string name="best_shops">أفضل الورش</string>
+    <string name="shop_title_txt">Shop Title</string>
+	<string name="network_error_msg">تعذر الإتصال بالإنترنت، يرجى التأكد من الإتصال وإعادة المحاولة!</string>
+	<string name="pull_to_refresh_msg">إسحب لأسفل لإعادة التحميل!</string>
+</resources>
